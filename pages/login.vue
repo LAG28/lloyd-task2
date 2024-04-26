@@ -9,14 +9,12 @@ const password = ref('');
 const loading = ref(false);
 
 const SubmitDisabled = computed(() => !email.value || !password.value);
-// Function to handle form submission
+
 const handleSubmit = () => {
   loading.value = true;
   setTimeout(() => {
     loading.value = false;
-    // Call the action in the store to add a name
     store.loginSuccessfully(email.value, password.value);
-    // Clear the input fields after submitting
     password.value = '';
     email.value = '';
   }, 2000);

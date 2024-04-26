@@ -1,20 +1,5 @@
 import { defineStore } from "pinia";
 
-/* export const useMyStore = defineStore('user', () => {
-  // Reactive state
-  const login = ref<string[][]>([]); // Define names as a reactive reference
-
-  // Action to add a name
-  function loginSuccessfully(email: string, password: string): void {
-    // Add the new names to the array
-    login.value.push([ email, password ]);
-  }
-
-  return {
-    login,
-    loginSuccessfully
-  };
-}); */
 
 interface LoginInfo {
   email: string;
@@ -57,7 +42,7 @@ export const useMyStore = defineStore("user", () => {
     email: string,
     password: string) {
       signup.value.push({ 
-        birthdate,
+        birthdate, 
         age, 
         middlename,
         lastname,

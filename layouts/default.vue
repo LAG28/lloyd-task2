@@ -1,3 +1,7 @@
+<script setup lang="ts">
+  const drawer = ref(false)
+</script>
+
 <template>
   <div>
     <v-card>
@@ -10,7 +14,7 @@
           <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         </v-app-bar>
         <v-navigation-drawer v-model="drawer" :location="$vuetify.display.mobile ? 'right' : 'right'" temporary
-          image="assets/props/lupy1.gif" >
+          image="assets/props/lupy1.gif">
           <v-list>
             <NuxtLink to="/" @click="console.log('name: Home, link: /')">
               <v-list-item prepend-icon="mdi-view-dashboard" title="Home"></v-list-item>
@@ -31,7 +35,3 @@
     </v-card>
   </div>
 </template>
-
-<script setup lang="ts">
-const drawer = ref(false)
-</script>
